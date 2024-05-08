@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniformes times do CBLOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="image">
+                <img class="product-image" src="loud.jpg" alt="uniforme da loud">
+            </div>
+            <div class="color">
+                <span class="verde active" data-image="loud.jpg" data-color="#32fa3c"></span>
+                <span class="red" "data-image="red.jpg" data-color="#ff0000"></span>
+                <span class="pain" data-image="pain.jpg" data-color="#070808"></span>
+                <span class="keyd" data-image="keyd.jpg" data-color="#5d1a9c"></span>
+            </div>
+            <div class="title">
+                UNIFORME LOUD 2023
+            </div>
+            <div class="detail">
+                <p>PREÇO: <span>R$125,00</span></p>
+                <a href="#"> COMPRAR AGORA!</a>
+            </div>
+                 
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        $(".color span").click(function(){
+        $(".color span").removeClass("active");
+        $(this).addClass("active");
+        $(".detail span").css("color", $(this).attr("data-color"));
+        $(".detail a").css("background",$(this).attr("data-color"));
+        $(".loud-imagem").attr("src",$(this).attr("data-image"));
+        $("body").css("background",$(this).attr("data-color"));
+        });
+    </script>
+</body>
+</html>
